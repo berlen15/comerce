@@ -25,10 +25,13 @@ public class Cesta {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    private Cesta(Usuario usuario){
+    public Cesta(){}
+
+    public Cesta(Usuario usuario){
         this.usuario=usuario;
         this.listadoArticulos = new ArrayList<>();
     }
+
 
     public Integer getIdcesta() {
         return idcesta;

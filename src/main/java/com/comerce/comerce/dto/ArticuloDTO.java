@@ -1,34 +1,13 @@
-package com.comerce.comerce.entity;
+package com.comerce.comerce.dto;
 
-import javax.persistence.*;
+import java.io.Serializable;
 
-@Entity
-@Table(name="articulo")
-public class Articulo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ArticuloDTO implements Serializable {
     private int idArticulo;
-    @Column(name="descripcion")
     private String descripcion;
-    @Column(name="disponible")
     private String disponible;
-    @Column(name="precio")
     private double precio;
-
-    @Column(name="ventas")
     private int ventas;
-
-    public Articulo(int idArticulo, String descripcion,
-                    String disponible, double precio, int ventas) {
-        this.idArticulo = idArticulo;
-        this.descripcion = descripcion;
-        this.disponible = disponible;
-        this.precio = precio;
-        this.ventas = ventas;
-    }
-
-    public Articulo() {}
-
     public int getCodigoArticulo() {
         return idArticulo;
     }
